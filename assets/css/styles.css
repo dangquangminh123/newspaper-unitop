@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+#wrapper {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0px auto;
+}
+
+.header {
+  margin: 0px auto;
+  flex-basis: 100%;
+  flex-grow: 1;
+  background-color: #1b2127;
+  padding: 10px;
+  color: white;
+}
+
+.header .header-first {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.header .header-first img {
+  width: 190px;
+  height: auto;
+}
+
+.header .header-first input {
+  background-color: #131619;
+  color: white;
+  outline: none;
+  padding: 8px 6px;
+  border: none #ddd;
+}
+
+.header .header-first input:after {
+  content: "/f002";
+  color: #f00;
+}
+
+.header .header-first input:focus {
+  outline: none;
+  border: none #ddd;
+  background: #131619;
+}
+
+.header .thanhnav {
+  margin: 5px auto;
+  display: flex;
+  flex-basis: 100%;
+  padding: 6px 0px;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.header .thanhnav .navbar a {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .thanhnav .navbar a:hover {
+  color: #4db2ec;
+}
+
+/* wp-content */
+
+.wp-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  background-color: #f4f4f4;
+  min-height: auto;
+}
+
+.tieude-popular {
+  position: absolute;
+  top: 10px;
+  padding: 7px;
+  left: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #23282d;
+}
+
+.wp-content .popular {
+  max-width: 100%;
+  min-height: 350px;
+  position: relative;
+}
+
+.wp-content .popular ul.product-popular {
+  margin-top: 60px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+
+ul.product-popular li {
+  flex-basis: 33.33%;
+  width: 33%;
+  padding: 5px;
+}
+
+.product-popular li .popular-item {
+  margin: 0px 5px;
+}
+
+.product-popular li .popular-item .popular-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #5f5f5f;
+}
+
+/* Bài viết mới */
+.new-post {
+  font-weight: bold;
+  top: -40px;
+  left: 5px;
+  position: absolute;
+  background-color: #4db2ec;
+  color: white;
+  padding: 6px;
+}
+
+.wp-content .content {
+  position: relative;
+  margin-top: 40px;
+  /* flex-grow: 5; */
+  flex-shrink: 2;
+  min-height: 600px;
+  flex-basis: 70%;
+  background-color: #ffffff;
+}
+
+.content .post-content {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.post-content .img-content {
+  width: 50%;
+  display: block;
+  float: left;
+}
+
+.post-content .img-content img {
+  width: 300px;
+  height: 200px;
+}
+.post-content .description-content {
+  margin-left: 10px;
+  line-height: 25px;
+}
+
+.description-content .title-content {
+  font-size: 21px;
+}
+
+.description-content .title-content:hover {
+  color: #4db2ec;
+  cursor: pointer;
+}
+
+.clear-both {
+  clear: both;
+}
+
+/* Siderbar */
+.wp-content .sidebar {
+  min-height: 600px;
+  margin-top: 5px;
+  flex-basis: 30%;
+  width: 30%;
+  flex-grow: 3;
+  flex-shrink: 1;
+  background-color: #ffffff;
+}
+
+/* .wp-content .sidebar .simulation {
+} */
+
+.wp-content .sidebar .simulation img {
+  width: 330px;
+}
+
+.sidebar .list-sidebar {
+  margin-top: 25px;
+}
+
+.sidebar .list-sidebar .topic {
+  background-color: #ff2d2d;
+  padding: 2px 5px;
+  color: #fff;
+  width: 180px;
+  font-size: 18px;
+}
+
+.sidebar .list-sidebar .topic-sidebar {
+  display: block;
+}
+
+.list-sidebar .topic-sidebar .item-topic {
+  line-height: 10px;
+  list-style: none;
+}
+
+.list-sidebar .topic-sidebar .name-topic {
+  float: left;
+  text-decoration: none;
+  color: #212121;
+}
+
+.list-sidebar .topic-sidebar .number-watch {
+  text-align: end;
+  color: #212121;
+  cursor: pointer;
+}
+
+.list-sidebar .topic-sidebar .item-topic:hover {
+  color: #ff3b3b;
+}
+
+/* About us */
+.abouts-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-basis: 100%;
+  background-color: #2e2f30;
+  min-height: 274px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.abouts-us .logo-brand {
+  padding: 10px;
+  flex-basis: 20%;
+  background-image: url("../images/logo.png");
+  /* background-size: 80px; */
+  background-repeat: no-repeat;
+  background-position: center 60px;
+}
+
+.abouts-us .about-des { 
+  margin-top: 25px;
+  flex-basis: 60%;
+  text-align: start;
+}
+
+.abouts-us .about-des .about-details {
+  color: #fff;
+}
+
+.abouts-us .about-des a {
+  text-decoration: none;
+}
+
+.abouts-us .follow-us {
+  margin-top: 25px;
+  flex-basis: 20%;
+  padding: 5px;
+}
+
+.abouts-us .follow-us .link-socials {
+  display: block;
+  float: left;
+  padding: 6px 5px;
+}
+
+.abouts-us .follow-us .link-socials .item-social {
+  background-color: #434648;
+  background-size: 30px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.abouts-us .follow-us .link-socials .item-social i {
+  font-size: 19px;
+  padding: 10px;
+}
+
+.abouts-us .follow-us .link-socials .item-social i:hover {
+  color: #4db2ec;
+}
+
+/* Footer */
+.footer {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+  background-color: #222527;
+  /* padding: 10px 65px; */
+  color: white;
+}
+
+.footer .coppyright {
+  flex-basis: 50%;
+  padding: 20px;
+}
+
+.footer .contact-info {
+  flex-basis: 50%;
+  display: block;
+    padding: 20px;
+  align-items: end;
+}
+
+.footer .contact-info .item-contact {
+  float: left;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.footer .contact-info .item-contact:hover {
+  color: #4db2ec;
+}
